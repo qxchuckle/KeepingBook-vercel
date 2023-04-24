@@ -1,6 +1,8 @@
 # KeepingBook
 nodejs + express + ejs + mongoose + mongodb的**练手**小项目
 
+连接mongodb-cloud，本地版前往此仓库[keepingBook](https://github.com/qxchuckle/keepingBook)
+
 **功能：**
 1. 注册登陆，会话控制、用户识别
 2. 基于token实现API，方便扩展，[API文档](https://console-docs.apipost.cn/preview/3d8ecc659c1e192b/da97e0b2ec13fd71)
