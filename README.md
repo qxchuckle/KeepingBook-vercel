@@ -6,7 +6,7 @@ nodejs + express + ejs + mongoose + mongodb的**练手**小项目
 2. 基于token实现API，方便扩展，[API文档](https://console-docs.apipost.cn/preview/3d8ecc659c1e192b/da97e0b2ec13fd71)
 3. 账单完整的增删改查
 
-**去体验：**[记账本](https://kpb.qcqx.cn/)
+**去体验：**[记账本](https://kpb.qcqx.cn/)  
 演示账号：username：qx ， password：123
 
 # 在vercel中部署
