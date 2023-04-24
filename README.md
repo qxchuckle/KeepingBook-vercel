@@ -9,6 +9,8 @@ nodejs + express + ejs + mongoose + mongodb的**练手**小项目
 **去体验：**[记账本](https://kpb.qcqx.cn/)  
 演示账号：username：qx ， password：123
 
+***
+
 # 在vercel中部署
 fork该仓库，修改**config.js**中的URL，应该首先去注册[mongodb-cloud](https://cloud.mongodb.com/)以获取连接URL
 
