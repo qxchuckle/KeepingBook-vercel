@@ -1,0 +1,27 @@
+body{
+    font-family:"Microsoft YaHei",微软雅黑;
+    color: #363636;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.content{
+    margin: 0 auto;
+    max-width: 300px;
+    padding: 20px 30px;
+    background: rgba(77, 190, 215, 0.6);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}

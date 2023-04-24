@@ -1,0 +1,105 @@
+body{
+    font-family:"Microsoft YaHei",微软雅黑;
+    color: #363636;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+.content{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.content-box{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 0 10px;
+}
+.content-box>*{
+    width: 100%;
+}
+.title{
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+.title h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+.add{
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.add a{
+    text-decoration: none;
+    color: rgb(33, 70, 181);
+}
+.record-box{
+    margin-top: 10px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+.record-item{
+    margin-bottom: 15px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    position: relative;
+}
+.record-item>.date{
+    height: 34px;
+    background: rgb(174, 209, 237);
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 22px;
+}
+.record-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    justify-content: space-between;
+    align-content: center;
+}
+.record-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1;
+}
+.record-body>.delete{
+    padding-left: 10px;
+    margin-left: 10px;
+    border-left: 1px solid rgb(201, 201, 201);
+    color: rgb(33, 70, 181);
+}
+.record-item>.type{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 14px;
+    padding: 0 6px;
+    height: 22px;
+    line-height: 22px;
+    color: #fff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.type.expenditure{
+    background: rgb(241, 141, 158);
+}
+.type.income{
+    background: rgb(85, 194, 134);
+}

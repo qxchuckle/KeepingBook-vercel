@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>添加记录</title>
+    <link rel="stylesheet" href="/css/page.css" />
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="content-box">
+        <div class="title">
+          <h2>添加记录</h2>
+        </div>
+        <div class="home">
+          <a href="/">账单列表</a>
+          <form id="logout_form" action="/logout" method="post">
+            <a href="javascript:;" onclick="document.getElementById('logout_form').submit();">退出登陆</a>
+          </form>
+        </div>
+        <form action="/add" method="post" autocomplete="off">
+          <div class="form-item">
+            <label for="matter">事项</label>
+            <input class="control" type="text" name="matter" id="matter" required/>
+          </div>
+          <div class="form-item">
+            <label for="date">时间</label>
+            <input class="control" type="date" name="date" id="date" required/>
+          </div>
+          <div class="form-item">
+            <label for="type">类型</label>
+            <select class="control" name="type" id="type">
+              <option selected="">支出</option>
+              <option>收入</option>
+            </select>
+          </div>
+          <div class="form-item">
+            <label for="account">金额</label>
+            <input class="control" type="text" name="account" id="account" required/>
+          </div>
+          <div class="form-item">
+            <label for="remark">备注</label>
+            <textarea class="control" name="remark" id="remark"></textarea>
+          </div>
+          <hr />
+          <button>添加</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

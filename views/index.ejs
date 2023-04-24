@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>记账本</title>
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+
+  <body>
+    <div class="content">
+      <div class="content-box">
+        <div class="title">
+          <h2>记账本</h2>
+        </div>
+        <div class="add">
+          <a href="/add">添加</a>
+          <form id="logout_form" action="/logout" method="post">
+            <a href="javascript:;" onclick="document.getElementById('logout_form').submit();">退出登陆</a>
+          </form>
+        </div>
+        <div class="record-box">
+          <% content.forEach(item=>{%>
+          <div class="record-item">
+            <div class="date"><%= moment(item.date).format('YYYY-MM-DD') %></div>
+            <div class="type <%= item.type==='支出'?'expenditure':'income'%>">
+              <%= item.type %>
+            </div>
+            <div class="record-body">
+              <div class="record-content">
+                <div class="matter"><%= item.matter %></div>
+                <div class="account"><%= item.account %> 元</div>
+              </div>
+              <a href="/delete/<%= item._id %>" class="delete">删除</a>
+            </div>
+          </div>
+          <%})%>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
