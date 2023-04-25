@@ -57,9 +57,12 @@ app.all("/*",function(req,res,next){
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', '*');
   res.header('Content-Type', 'application/json;charset=utf-8');
-  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, PATCH');
+  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, PATCH ,OPTIONS');
   res.header("Access-Control-Allow-Credentials", true); // 跨域的时候是否携带cookie
-  next();
+  if(req.method.toLowerCase() == 'options')
+      res.send(200); // 让options 尝试请求快速结束
+  else
+      next();
 })
 // 使用接口路由，并添加api前缀
 app.use('/api', accountRouter);
