@@ -51,6 +51,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 // 使用注册登陆路由
 app.use('/', authRouter);
+
+// 解决API跨域问题
+app.all("/*",function(req,res,next){
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  res.header('Content-Type', 'application/json;charset=utf-8');
+  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, PATCH');
+  next();
+})
 // 使用接口路由，并添加api前缀
 app.use('/api', accountRouter);
 // 使用注册登陆API路由
