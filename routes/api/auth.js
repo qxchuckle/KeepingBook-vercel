@@ -86,7 +86,7 @@ router.post('/login', (req, res) => {
                 username: data.username,
                 _id: data._id
             }, config.token_secret, {
-                expiresIn: 60 * 24 * 7
+                expiresIn: 60 * 60 * 24 * 7
             });
             res.json({
                 code: '0000',
